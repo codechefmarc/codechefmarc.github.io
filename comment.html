@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/style/style.css" rel="stylesheet">
+
+  <title>Art of DJ Berger</title>
+
+</head>
+
+<body>
+  <nav id="hamnav">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger">
+  <div id="hamitems">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="words.html">In Her Own Words</a></li>
+      <li><a href="art.html">Art Quilts</a></li>
+      <li><a href="spiritual.html">Spiritual Quilts</a></li>
+      <li><a href="traditional.html">Traditional Quilts</a></li>
+      <li><a href="comment.html">Comment Form</a></li>
+      <li><a href="gallery.html">Quilt Slideshow</a></li>
+    </ul>
+  </div>
+  </nav>
+
+  <header>
+    <h1>The Quilt Art Legacy of DJ Berger</h1>
+  </header>
+      <h2>I'd Love Your Feedback!</h2>
+     <form
+       action="https://formspree.io/f/mgegqkjo"
+       method="POST">
+
+       <fieldset>
+         <legend>Most Interesting Quilt Design Category?</legend>
+         <div class="tableRow">
+           <p>Type:</p>
+           <p>
+                   <input type="radio" id="art_quilts" name="quilts_category" value="art" checked> 
+               <label for="art_quilts">Art Quilts</label><br>
+                   <input type="radio" id="spiritual_quilts" name="quilts_category" value="spiritual"> 
+                     <label for="spiritual_quilts">Spiritual Quilts</label><br>
+              <input type="radio" id="traditional_quilts" name="quilts_category" value="tradition"> 
+                <label for="traditional_quilts">Traditional Quilts</label><br>
+             <input type="radio" id="no_commit" name="quilts_category" value="no_commit"> 
+               <label for="no_commit">Don't make me choose!</label>
+           </p>
+         </div>
+      </fieldset>
+<br>
+
+       <fieldset>
+         <legend>Favorite Quilt in Each Category?</legend>
+          <label for="quilt_title">Art:</label>
+            <select name="quilt_title">
+              <option value="butterfly">Butterfly House</option>
+              <option value="celtictree">Celtic Tree</option>
+              <option value="bythebay">City By The Bay</option>
+              <option value="fire">DJ's Fire Quilt</option>
+              <option value="lottalectrons">Dots Alotta 'Lectrons</option>
+              <option value="dragonswalk">Dragon's Walk</option>
+              <option value="eyequilt">Eye Qui(l)t</option>
+              <option value="tulips">Flying Over Tulip Fields</option>
+              <option value="yosemite">Go Take a Hike (Yosemite)</option>
+              <option value="loss">Loss</option>
+              <option value="maples10">Maples, Powers of 10</option>
+              <option value="olddawgs">Old Dawgs, New Tricks</option>
+              <option value="sunflowers">Sunflowers</option>
+            </select>
+      <br>
+      <br>
+         <label>Spiritual:</label>
+         <select name="quilt_title">
+           <option value="dayenu">Dayenu</option>
+           <option value="huppah">Huppah</option>
+           <option value="passover">It's Passover!</option>
+           <option value="jerusalem">Jerusalem of Gold</option>
+           <option value="kipot">Kipot Gam Yachad</option>
+           <option value="kiteitzeh">Ki Teitzeh</option>
+           <option value="massoreh">Massoreh</option>
+           <option value="piecing">Piecing Prayers Together</option>
+           <option value="psalm8">Psalm 8</option>
+           <option value="terumah">Terumah</option>
+         </select>
+      <br>
+      <br>
+         <label>Traditional:</label>
+          <select name="quilt_title">
+            <option value="hexagons">Blue Hexagons</option>
+            <option value="calistar">California Star</option>
+            <option value="camelot">Camelot</option>
+            <option value="cinco">Cinco de Mayo</option>
+            <option value="jane">Dear Jane: Civil War Tribute</option>
+            <option value="maplescolor">Colorful Maples</option>
+            <option value="elephant">Elephant Spring</option>
+            <option value="eureka">Eureka</option>
+            <option value="fallwinter">Fall Into Winter</option>
+            <option value="flag">It's a Grand Old Flag</option>
+            <option value="ladyinred">Lady In Red</option>
+            <option value="wedding">Marc and Dana's Wedding Quilt</option>
+            <option value="nesting">Nesting Dolls</option>
+            <option value="starblocks">Star With Blocks</option>
+          </select>
+        </fieldset>
+       <br>
+       
+      <fieldset>
+         <legend>Topics to Add or Expand on in the Site?</legend>
+        <div class="tableRow">
+         <p>
+                 <input type="checkbox" id="learning_extras" name="extras[]" value="learning" checked> 
+             <label for="learning_extras">Resources for learning to quilt</label><br>
+                 <input type="checkbox" id="profile_extras" name="extras[]" value="profiles">
+                   <label for="profile_extras">Profiles of other quilters</label><br>
+            <input type="checkbox" id="specials_extras" name="extras[]" value="specials">
+              <label for="specials_extras">Special quilting techniques</label>
+         </p>
+       </div>
+      </fieldset>
+<br>
+
+       
+      <fieldset>
+        <legend>Contact Info and Comments</legend>
+           <p>
+             <label for="name">Name: </label>
+          <input type="text" id="name" name="name" value="" placeholder="Your Name" required>
+           </p> 
+        <p>
+          <label for="email">Your email:</label>
+          <input type="email" id="email" name="email" value="" placeholder="Email@domain.com">
+        </p>
+  
+         <p><label for="message">Your comments: </label></p>
+           <textarea id="message" name="message" placeholder="Tell me what you think!"></textarea>
+        
+      </fieldset>
+
+       <br>
+       <br>
+      <button class="reset" type="reset">Reset</button>
+       
+      <button class="send" type="submit">Send</button>
+      
+      </form>
+</body>
+</html>

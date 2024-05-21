@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Peralta&display=swap');
+
+img, picture, video, iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* MEDIA QUERIES AT BOTTOM */
+
+/* DISCUSS BORDERS, MARGINS WITH MARC, NEED TO UNIFY WITH SUPERVISION */
+
+body {
+  background: linear-gradient(90deg, rgba(101,30,149,1) 0%, rgba(161,20,20,1) 50%, rgba(222,113,28,1) 100%);
+  font-family: "Verdana", sans-serif;
+  font-size: 1rem;
+  color: antiquewhite;
+  box-sizing: border-box;
+  margin: 5px;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-left: 1em;
+}
+
+.containerj {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem 2rem;
+  overflow-x:auto;
+}
+
+/* HAMBURGER NAV BEGINS HERE */
+ul {
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+#hamitems a {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+  }
+
+  /* (B) SHOW HAMBURGER ICON */
+  #hamnav label {
+    display: inline-block;
+    color: navajowhite;
+    background: rgb(101 30 149);
+    font-style: normal;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
+  /* (C) TOGGLE SHOW/HIDE MENU */
+  #hamitems { display: none; }
+  #hamnav input:checked ~ #hamitems { display: block; }
+
+#hamburger {
+  display: none;
+}
+
+/* NAV ENDS HERE */
+
+h1 {
+  font-family: "Peralta", Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+a {
+  color: navajowhite
+}
+
+blockquote {
+  padding: 2rem 10% 3rem;
+  display: inline-block;
+  clear: both;
+  color: whitesmoke;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem auto 2.5rem;
+  position: relative;
+  text-align: center;
+}
+
+cite {
+  font-style: italic;
+}
+
+#frontcenter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 2%;
+}
+
+.journey {
+  display: inline-block;
+  margin: 0 2rem;
+}
+
+main {
+  display: inline-block;
+  width: 100%;
+}
+
+footer {
+  background-color: rgb(101 30 149 / 0.5);
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+figure {
+display: inline-block;
+}
+
+figcaption {
+  font-style: italic;
+  text-align: center;
+}
+
+#wedding { 
+  float: right;
+}
+
+table {
+  width: 100%;
+  caption-side: top;  /* NEED TO STYLE */
+  border-collapse: collapse;
+  margin: 0 2rem;
+  overflow-x:auto;
+}
+
+th, tr, td {
+  display:block;
+  border: dotted white 1px;
+  border-spacing: 3px;
+  padding: 1rem;
+}
+
+tr:nth-of-type(2n) {
+  background: rgb(251 250 249 / 0.15);
+}
+
+table caption {
+  font-size:1.5rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+th img:hover {
+  animation: pop 2s;
+}
+/* KEYFRAME ANIMATION BEGINS HERE */
+@keyframes pop {
+   0% {
+     transform: scale(0.2);
+     opacity: 0;
+     top: 0;
+   }
+   50% {
+     transform: scale(1.2);
+     opacity: 1;
+     top: -10px;
+   }
+   100% {
+     transform: scale(1);
+     top: 0;
+   }
+  }
+/* KEYFRAME ANIMATION ENDS HERE */
+
+/* COMMENT FORM CSS STARTS HERE */
+div.tableRow {
+  display: table-row;
+}
+
+div.tableRow > p, div.tableRow > label, div.tableRow > input {
+  display: table-cell;
+  vertical-align: top;
+  padding: 3px;
+}
+div.tableRow label:first-child {
+  text-align: right;
+}
+form textarea {
+  display: table-cell;
+  width: 20rem;
+  height: 7rem;
+}
+legend {
+  font-weight: bold;
+}
+
+button {
+  display: inline-flex;
+  margin-left: 5rem;
+  font-weight: bold;
+}
+
+button.reset {
+  background-color: indianred;
+  color: black;
+}
+
+button.send {
+  background-color: palegreen;
+  color: black;
+}
+/* COMMENT FORM CSS ENDS HERE */
+
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    margin-left: 2rem;
+  }
+
+  /* NAV BEGINS HERE */
+  /* (A) WRAPPER */
+  #hamnav {
+    width: 100%;
+    background: #661E92;
+    z-index: 10;
+    position: sticky;
+    top: 0;
+  }
+
+  #hamitems { display: block; }
+  
+  /* (B) HORIZONTAL MENU ITEMS */
+  #hamitems ul { display: flex; }
+  #hamitems a {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: navajowhite;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {background: navajowhite; color: #661E92; font-weight: bold;}
+
+  /* (C) HIDE HAMBURGER */
+  #hamnav label, #hamburger { display: none; }
+
+  /* NAV ENDS HERE */
+  
+  th, tr, td {
+    display:revert;
+    }
+  
+   aside {
+    grid-column: 1 / span 2;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 2fr 6fr 2fr;
+    margin-left: 1.5rem;
+  }
+
+  aside {
+    grid-column: unset;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  #navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+   }
+}

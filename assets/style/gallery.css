@@ -1,0 +1,73 @@
+/* (A) DIMENSIONS + LAYERING */
+/* (A1) WRAPPER & SLIDE DIMENSIONS */
+.slides, .slides * { box-sizing: border-box; }
+.slides, .slide, .slide img {
+  width: 100%; max-width: 700px;
+  max-height: 700px;
+  }
+.slide img { object-fit: cover; }
+
+/* (A2) SLIDES LAYERING */
+.slides { position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        padding: 10px;}
+.slide { position: absolute; top: 0; left: 0;
+       overflow: auto;}
+
+/* (B) SLIDES MECHANISM */
+/* (B1) HIDE RADIO BUTTONS */
+.slides input[type=radio] { display: none; }
+
+/* (B2) ONLY SHOW CHOSEN SLIDE */
+.slides input[type=radio] + .slide {
+  z-index: 1;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s;
+}
+.slides input[type=radio]:checked + .slide {
+  z-index: 9;
+  opacity: 1; visibility: visible;
+}
+
+/* (C) CAPTION + LAST + NEXT */
+/* (C1) POSITION */
+.slide .last, .slide .next, .slide .caption { position: absolute; }
+
+/* (C2) CAPTION */
+.slide .caption {
+  width: 100%;
+  padding: 10px;
+  top: 0; left: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* (C3) LAST NEXT BUTTONS */
+.slide .last { left: 0; }
+.slide .next { right: 0; }
+.slide .last, .slide .next {
+  /* (C3-1) POSITION */
+  top: 50%; transform: translateY(-50%);
+
+  /* (C3-2) COSMETICS */
+  padding: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+
+  /* (C3-3) HIDE BY DEFAULT */
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+/* (C3-4) SHOW LAST NEXT ON HOVER */
+.slides:hover .last, .slides:hover .next {
+  opacity: 1; visibility: visible;
+}
+
+/* (X) NOT IMPORTANT */
+* { font-family: Arial, Helvetica, sans-serif; }
